@@ -1,4 +1,4 @@
-﻿using astar;
+﻿using Resolver.AStar;
 using System;
 using System.Diagnostics;
 
@@ -8,9 +8,9 @@ namespace Resolver.Program
     {
         static void Main(string[] args)
         {
-            var initialState = new[] { 1, 2, 3, 4, 6, 5, 8, 7, 9, 0 };
+            var initialState = new[] { 1, 2, 3, 4, 6, 0, 8, 5, 7, 9 };
 
-            var solver = new AStarResolver(new Move(0, initialState));
+            var solver = new AStarResolver();
 
             var timer = Stopwatch.StartNew();
 

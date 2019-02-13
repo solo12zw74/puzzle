@@ -4,17 +4,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace astar
+namespace Resolver.AStar
 {
     public class AStarResolver : IResolver
     {
-        private readonly Move _initialMove;
         private readonly HashSet<Move> _passedPositions;
         private readonly SimplePriorityQueue<Move> _queue;
 
-        public AStarResolver(Move initialMove)
+        public AStarResolver()
         {
-            _initialMove = initialMove;
             _queue = new SimplePriorityQueue<Move>();
             _passedPositions = new HashSet<Move>();
         }
@@ -23,9 +21,9 @@ namespace astar
         {
             _queue.Clear();
             _passedPositions.Clear();
+            var initialMove = new Move(0, input);
+            _queue.Enqueue(initialMove, initialMove.Heuristic());
 
-            _queue.Enqueue(_initialMove, _initialMove.Heuristic());
-            
             while (_queue.Count > 0)
             {
                 var move = _queue.Dequeue();
@@ -49,7 +47,7 @@ namespace astar
                 }
             }
 
-            throw new SolutionNotFoundException(_initialMove.CurrentState);
+            throw new SolutionNotFoundException(initialMove.CurrentState);
         }
     }
 }
