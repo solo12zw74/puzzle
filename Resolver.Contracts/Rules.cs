@@ -6,7 +6,7 @@ namespace Resolver.Contracts
 {
     public static class Rules
     {
-        public static List<int[]> MovesMap = new List<int[]> {
+        public static int[][] MovesMap = new int[][] {
             new [] { 1,2 },
             new [] { 0,4 },
             new [] { 0,3,5 },
