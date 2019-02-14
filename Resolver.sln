@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resolver.Program", "Resolve
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resolver.AStar.Test", "Resolver.AStar.Test\Resolver.AStar.Test.csproj", "{E377B7B9-41B9-4938-9986-4606E9E49CF1}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Resolver.AStar.FSharp", "Resolver.AStar.FSharp\Resolver.AStar.FSharp.fsproj", "{F7BA105E-72E2-4E51-B7A1-0C56B4F3790E}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Resolver.AStar.FSharp", "Resolver.AStar.FSharp\Resolver.AStar.FSharp.fsproj", "{F7BA105E-72E2-4E51-B7A1-0C56B4F3790E}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Resolver.AStar.FSharp.Test", "Resolver.AStar.FSharp.Test\Resolver.AStar.FSharp.Test.fsproj", "{7FD20DB4-60B8-4EC0-A624-BB5987BF72D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{F7BA105E-72E2-4E51-B7A1-0C56B4F3790E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7BA105E-72E2-4E51-B7A1-0C56B4F3790E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7BA105E-72E2-4E51-B7A1-0C56B4F3790E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FD20DB4-60B8-4EC0-A624-BB5987BF72D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FD20DB4-60B8-4EC0-A624-BB5987BF72D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FD20DB4-60B8-4EC0-A624-BB5987BF72D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FD20DB4-60B8-4EC0-A624-BB5987BF72D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

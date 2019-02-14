@@ -1,6 +1,6 @@
 ﻿namespace Resolver.AStar.FSharp
 
-module private Implementation =
+module Implementation =
     open Resolver.Contracts
 
     let movesMap = Rules.MovesMap |> List.ofArray |> List.map (List.ofArray)
