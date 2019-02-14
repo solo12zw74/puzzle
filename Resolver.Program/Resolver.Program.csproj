@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="SimpleInjector" Version="4.4.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Resolver.AStar.FSharp\Resolver.AStar.FSharp.fsproj" />
     <ProjectReference Include="..\Resolver.AStar\Resolver.AStar.csproj" />
   </ItemGroup>

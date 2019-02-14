@@ -1,6 +1,6 @@
 ﻿namespace Resolver.AStar.FSharp
 
-type public AStarResolver() =     
+type public AStarResolver() =
     interface Resolver.Contracts.IResolver with
-        member x.Resolve(input: int []): int [] = 
-            Implementation.computeFrom (List.ofArray input) |> Array.ofList
+        member x.Name: string = "F# Resolver"
+        member x.Resolve(input: int []): int [] = Implementation.computeFrom (List.ofArray input) |> Array.ofList

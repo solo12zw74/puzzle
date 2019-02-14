@@ -17,6 +17,8 @@ namespace Resolver.AStar
             _passedPositions = new HashSet<Move>();
         }
 
+        public string Name => "C# resolver";
+
         public int[] Resolve(int[] input)
         {
             _queue.Clear();

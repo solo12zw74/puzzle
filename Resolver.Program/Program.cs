@@ -1,28 +1,39 @@
-﻿using Resolver.AStar;
+﻿using Resolver.Contracts;
+using SimpleInjector;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace Resolver.Program
 {
     class Program
     {
+        private static readonly Container _container;
+
+        Dictionary<int, IResolver> _resolveres = new Dictionary<int, IResolver>();
+
         static void Main(string[] args)
         {
-            var initialState = new[] { 1, 2, 3, 4, 6, 0, 8, 5, 7, 9 };
+            bool @continue = true;
+            var ui = _container.GetInstance<UserInterface>();
 
-            var solver = new AStarResolver();
+            while (@continue)
+            {
+                @continue = ui.RequestUserAction();
+            }
+        }
 
-            var timer = Stopwatch.StartNew();
+        static Program()
+        {
+            _container = new Container();
 
-            var solution = solver.Resolve(initialState);
+            _container.Collection.Register<IResolver>(
+                typeof(AStar.AStarResolver),
+                typeof(AStar.FSharp.AStarResolver));
 
-            timer.Stop();
+            _container.Register<UserInterface>();
 
-            Console.WriteLine($"The solution is: [{string.Join("", solution)}]");
-            Console.WriteLine($"Time taken:      {timer.Elapsed.Milliseconds} ms");
-            Console.WriteLine($"Memory usage:    {GC.GetTotalMemory(true)} bytes");
-
-            Console.ReadKey();
+            _container.Verify();
         }
     }
 }
