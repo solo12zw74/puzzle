@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Resolver.AStar.FSharp\Resolver.AStar.FSharp.fsproj" />
     <ProjectReference Include="..\Resolver.AStar\Resolver.AStar.csproj" />
   </ItemGroup>
 
