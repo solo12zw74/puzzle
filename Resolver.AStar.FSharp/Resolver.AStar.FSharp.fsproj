@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Move.fs" />
     <Compile Include="Implementation.fs" />
     <Compile Include="AStarResolver.fs" />
   </ItemGroup>
